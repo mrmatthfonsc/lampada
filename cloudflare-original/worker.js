@@ -41,7 +41,7 @@ input:focus{border-color:#2C6A5C;background:#fff}button{width:100%;font:inherit;
 <input type="password" id="pw" placeholder="Senha" inputmode="numeric" autocomplete="current-password" autofocus required><button>Entrar</button><div class="err" id="e">${msg || ""}</div></form>
 <script>document.getElementById('f').onsubmit=async e=>{e.preventDefault();const r=await fetch('/api/login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({password:document.getElementById('pw').value})});if(r.ok)location.reload();else document.getElementById('e').textContent=r.status===429?'Muitas tentativas. Aguarde 15 minutos.':'Senha incorreta.';};</script></body></html>`;
 
-const DEFAULT_PASSWORD = "1207";
+const DEFAULT_PASSWORD = "[removido]";
 const appPassword = env => env.APP_PASSWORD || DEFAULT_PASSWORD;
 
 let schemaReady = false;
