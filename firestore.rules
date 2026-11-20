@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isOwner() {
+      return request.auth != null && request.auth.token.email == 'mr.matthfonseca@gmail.com';
+    }
+    match /lampada/{id} {
+      allow read, write: if isOwner();
+    }
+  }
+}

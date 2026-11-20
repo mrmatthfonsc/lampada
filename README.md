@@ -1,5 +1,7 @@
 # Lâmpada
 
-Estudo pessoal e rotina teocrática.
+Estudo pessoal e rotina teocrática. Roda no GitHub Pages; os dados ficam no Firebase (projeto `congregacao-fortaleza`, coleção `lampada`).
 
-`cloudflare-original/` guarda a última versão que rodava no Cloudflare (Worker + app instalado no D1, versão 2026.11.17-4), como backup antes da migração para GitHub Pages + Firebase.
+- `index.html` — o app
+- `firestore.rules` — regras do banco (só o dono lê e grava)
+- `cloudflare-original/` — última versão que rodava no Cloudflare, guardada como backup
